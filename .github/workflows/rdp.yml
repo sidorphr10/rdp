@@ -92,8 +92,6 @@ jobs:
           # Test connectivity using Test-NetConnection against the Tailscale IP on port 3389
           $testResult = Test-NetConnection -ComputerName $env:TAILSCALE_IP -Port 3389
           if (-not $testResult.
-
-K-shadow, [25/12/2025 15:57]
 TcpTestSucceeded) {
               Write-Error "TCP connection to RDP port 3389 failed"
               exit 1
